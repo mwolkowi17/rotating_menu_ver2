@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
-import { moonMassDiv, moonMassDiv2, moonMassDiv3, moonMassDiv4, moonMassDiv5, moonMassDiv6, moonMassDiv7, moonMassDiv8 } from './divs';
+import { moonMassDiv,  moonMassDiv4,  moonMassDiv6, moonMassDiv7 } from './divs';
 
 const scene = new THREE.Scene()
 
@@ -32,34 +32,24 @@ scene.add(tetra)
 
 const moonMassLabel = new CSS2DObject( moonMassDiv );
 moonMassLabel.position.set( 0.6, 0.6, 0.6 );
-//moonMassLabel.center.set( 0, 0 );
-//const moonMassLabel2 = new CSS2DObject(moonMassDiv2);
-//moonMassLabel2.position.set( -0.5, 0.5, 0.5 );
-//const moonMassLabel3 = new CSS2DObject(moonMassDiv3);
-//moonMassLabel3.position.set( 0.5, -0.5, 0.5 );
+
 const moonMassLabel4 = new CSS2DObject(moonMassDiv4);
 moonMassLabel4.position.set( -0.6, -0.6, 0.6 );
 
-//const moonMassLabel5 = new CSS2DObject( moonMassDiv5 );
-//moonMassLabel5.position.set( 0.5, 0.5, -0.5 );
-//moonMassLabel.center.set( 0, 0 );
 const moonMassLabel6 = new CSS2DObject(moonMassDiv6);
 moonMassLabel6.position.set( -0.6, 0.6, -0.6 );
+
 const moonMassLabel7 = new CSS2DObject(moonMassDiv7);
 moonMassLabel7.position.set( 0.6, -0.6, -0.6 );
-//const moonMassLabel8 = new CSS2DObject(moonMassDiv8);
-//moonMassLabel8.position.set( -0.5, -0.5, -0.5 );
-
 
 tetra.add(moonMassLabel);
-//tetra.add(moonMassLabel2);
-//tetra.add(moonMassLabel3);
+
 tetra.add(moonMassLabel4);
-//tetra.add(moonMassLabel5);
+
 tetra.add(moonMassLabel6);
+
 tetra.add(moonMassLabel7);
-//tetra.add(moonMassLabel8);
-//moonMassLabel.layers.set( 1 );
+
 
 const labelRenderer = new CSS2DRenderer();
 				labelRenderer.setSize( window.innerWidth, window.innerHeight );
